@@ -2,13 +2,11 @@
 
 # CLI PoP Miner
 
-{% hint style="info" %}
-### 📜 **TL;DR:**
+### 📜 **TL;DR (Too Long; Didn't Read)**
 
 * This guide provides straightforward steps to download, set up, and run your PoP Miner, either by downloading **pre-built binaries** or by **building from source**.
 * Ensure you have your development environment ready and follow the steps below to join the mining network.
 * To start mining, claim tBTC via the Hemi [Discord faucet](https://discord.gg/hemixyz) or send at least `0.002 tBTC` to your provided Bitcoin testnet address and run the miner with your private key.
-{% endhint %}
 
 ***
 
@@ -20,7 +18,7 @@
 
 ## 📚 Tutorial
 
-### 1. Binaries
+### 1️⃣. Binaries
 
 [Download a pre-built binary](https://github.com/hemilabs/heminetwork/releases) or [build from source using the README](https://github.com/hemilabs/heminetwork?tab=readme-ov-file#-building-from-source). Choose the release you want to use (_if unsure, choose the latest_), and click on `Assets` dropdown:
 
@@ -36,11 +34,10 @@ The package you will need to download depends on your OS and architecture:
 
 ***
 
-### 2. Extract the files
+### 2️⃣. Extract the files
 
 After downloading the necessary files, you must extract them from their compressed format before you can use or access the software. On most operating systems, you can right-click on the downloaded archive and choose "Extract" or similar.&#x20;
 
-{% hint style="info" %}
 **Linux/macOS tip**:&#x20;
 
 You can also use the command `tar xvf heminetwork_v0.2.8_linux_amd64.tar.gz`\
@@ -50,20 +47,17 @@ Run the  `uname -a` command in the Terminal to view all system information, ensu
 Depending on the output:\
 "**x86\_64**" => Choose the "**amd64**" package corresponding to your OS\
 "**arm64**" => Choose the "**arm64**" package corresponding to your OS
-{% endhint %}
 
 ***
 
-### 3. Open your CLI and navigate to the extracted folder
+### 3️⃣. Open your CLI and navigate to the extracted folder
 
 Launch your CLI:
 
-{% hint style="info" %}
 **For Windows:**
 
 * Press `⊞ Win` + `R` together to open the "Run Program Or File" Window
 * Type "cmd" and press `Enter`
-
 
 
 **For macOS:**
@@ -76,7 +70,7 @@ Launch your CLI:
 
 * Depends on OS. On Ubuntu (Gnome): `Ctrl` + `Alt` + `T`
 * For most other distros, you can press `Super` (Windows Key) and search for Terminal.&#x20;
-{% endhint %}
+
 
 Navigate to the folder you extracted by typing `cd` (**don't press `Enter` ye**t) and then drag the path of the extracted folder into your CLI, or type the path in manually and then press `Enter`.
 
@@ -86,21 +80,17 @@ Navigate to the folder you extracted by typing `cd` (**don't press `Enter` ye**t
 
 ***
 
-### 4. Confirm folder contents
+### 4️⃣. Confirm folder contents
 
 List the files:
 
-{% hint style="info" %}
 **For Windows:**
 
 * `dir`  (and press `Enter`)Type "cmd" and press `Enter`
 
-
-
 **For macOS:**
 
 * `ls`  (and press `Enter`)
-{% endhint %}
 
 Your output should be:
 
@@ -111,7 +101,7 @@ Your output should be:
     ```
 *   **For Windows**
 
-    ```none
+    ```
     bfgd.exe    bssd.exe    extool.exe     hemictl.exe     keygen.exe     popmd.exe     tbcd.exe
     ```
 
@@ -121,11 +111,11 @@ Your output should be:
 
 To ensure you downloaded the correct binaries and are able to run them, execute the command below:
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Linux &#x26; macOS</strong></td><td><p><mark style="color:purple;">⚠️ On Mac you will need to first remove the quarantine by running the following command in your Terminal:</mark></p><p><mark style="color:purple;"><code>xattr -d com.apple.quarantine ./popmd</code></mark><br><br><strong>Run</strong></p><p><code>./popmd --help</code></p></td><td></td></tr><tr><td><strong>Windows</strong></td><td><mark style="color:purple;">⚠️ <strong>Important Note for Windows Users</strong>: To successfully execute this command, you must use the Command Prompt (CMD), not PowerShell (which is the default terminal in environments like Visual Studio Code).</mark></td><td><p></p><p><strong>Run</strong></p><p><code>popmd.exe --help</code></p></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Linux &#x26; macOS</strong></td><td><p><mark style="color:purple;">⚠️ On Mac you will need to first remove the quarantine by running the following command in your Terminal:</mark></p><p><mark style="color:purple;"><code>xattr -d com.apple.quarantine ./popmd</code></mark><br><br></code></p></td><td><strong>Run</strong></p><p><code>./popmd --help</td></tr><tr><td><strong>Windows</strong></td><td><mark style="color:purple;">⚠️ <strong>Important Note for Windows Users</strong>: To successfully execute this command, you must use the Command Prompt (CMD), not PowerShell (which is the default terminal in environments like Visual Studio Code).</mark></td><td><p></p><p><strong>Run</strong></p><p><code>popmd.exe --help</code></p></td></tr></tbody></table>
 
 This will display the help menu for `popmd`, indicating that it's installed and operational.
 
-```none
+```
 Hemi Proof of Proof miner: v0.1.0-pre+f09d4e5ff
 Usage:
 	help (this help)
@@ -142,11 +132,9 @@ Environment:
 
 ***
 
-### 6a. Generate public key
+### 6️⃣a. Generate public key
 
-{% hint style="warning" %}
 If you prefer to PoP mine using a preexisting private key, you may skip this step. **You may import a private key from either an EVM or BTC address.**
-{% endhint %}
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Linux &#x26; macOS</strong></td><td><p><mark style="color:purple;">⚠️ On Mac you will need to remove the quarantine by running:</mark></p><p><mark style="color:purple;"><code>xattr -d com.apple.quarantine ./keygen</code></mark></p></td><td><p><strong>Run the following command:</strong></p><pre data-overflow="wrap"><code>./keygen -secp256k1 -json -net="testnet" > ~/popm-address.json
 </code></pre></td></tr><tr><td><strong>Windows</strong></td><td><p><mark style="color:purple;">⚠️ <strong>Important Note for Windows Users</strong>: To successfully execute this command, you must use the Command Prompt, not PowerShell (which is the default terminal in environments like Visual Studio Code). Follow these steps to open Command Prompt:</mark></p><ol><li><mark style="color:purple;">Click on the <strong>Start Menu</strong> button or press the <strong>Windows</strong> key on your keyboard.</mark></li><li><mark style="color:purple;">Type <strong><code>cmd</code></strong></mark> <mark style="color:purple;">into the search bar and open it.</mark></li><li>Type the following command and press Enter:</li></ol></td><td><pre><code><strong>keygen.exe -secp256k1 -json 
@@ -155,21 +143,19 @@ If you prefer to PoP mine using a preexisting private key, you may skip this ste
 </strong></code></pre><p><strong>Note:</strong> After running the command, you might not see any immediate feedback in the Command Prompt. This is expected behavior.</p><ol start="4"><li>Open the generated key file</li></ol><p>After generating the key file, you'll want to check its contents. To do this, use the following command in Command Prompt:</p><pre class="language-cmd" data-overflow="wrap"><code class="lang-cmd">%HOMEDRIVE%%HOMEPATH%\popm-address.json
 </code></pre><p>This command opens the <code>popm-address.json</code> file in Notepad, allowing you to view or edit the generated key.</p></td></tr></tbody></table>
 
-### 6b. Open the JSON
+### 6️⃣b. Open the JSON
 
 If you chose to generate a new private key in Step 6a, open your JSON to view your file contents.&#x20;
 
-{% hint style="info" %}
 **On Windows:** See the above instructions for how to open the file in Notepad.
 
 **On Linux/macOS:** Run the following command to print the contents of your key file to the Terminal:\
 \
 `cat ~/popm-address.json`
-{% endhint %}
 
 You should see a result like:
 
-```none
+```
 {
   "ethereum_address": "0x12345FabcD298299b8250e16eEb7D6a7B81DfEdC",
   "network": "testnet",
@@ -181,7 +167,7 @@ You should see a result like:
 
 ***
 
-### 7. Fund your address
+### 7️⃣. Fund your address
 
 Find your wallet address:&#x20;
 
@@ -196,22 +182,20 @@ Fund your wallet:&#x20;
 
 ***
 
-### 8. Run the Miner
+### 8️⃣. Run the Miner
 
 In your console, execute the following commands while:
 
 1. replacing `<private_key>` with either the value from your JSON file in Step 5 **OR** your preexisting EVM/BTC private key,
 2. replacing `<fee_per_vB_integer>` with the fee in sat/vB you want to pay.&#x20;
 
-{% hint style="info" %}
 Read the [**"Bitcoin fee/vB"**](setup-part-1.md#bitcoin-fee-vb) section below if you need help determining what value to set here.&#x20;
-{% endhint %}
 
 **Linux & macOS**
 
 ```
-export POPM_BTC_PRIVKEY=<private_key>
-export POPM_STATIC_FEE=<fee_per_vB_integer>
+export POPM_BTC_PRIVKEY=private_key
+export POPM_STATIC_FEE=fee_per_vB_integer
 export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 ./popmd
 ```
@@ -219,15 +203,15 @@ export POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public
 **Windows**
 
 ```
-set POPM_BTC_PRIVKEY=<private_key>
-set POPM_STATIC_FEE=<fee_per_vB_integer>
+set POPM_BTC_PRIVKEY=private_key
+set POPM_STATIC_FEE=fee_per_vB_integer
 set POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public 
 popmd.exe
 ```
 
 ***
 
-### 9. Expected Console Output
+### 9️⃣. Expected Console Output
 
 <pre class="language-none"><code class="lang-none">2024-09-19 23:03:46 INFO popmd popmd.go:111 Hemi Proof-of-Proof Miner v0.4.3+0c53c8654 (Hemi Labs, popmd, go1.23.1 darwin/arm64)
 2024-09-19 23:03:46 INFO popmd popmd.go:115 POPM_BFG_URL           : wss://testnet.rpc.hemi.network/v1/ws/public
@@ -247,11 +231,9 @@ popmd.exe
 
 ***
 
-### 10. 🎉 Congrats! You are now a Hemi PoP Miner!
+### 🔟. 🎉 Congrats! You are now a Hemi PoP Miner!
 
-{% hint style="info" %}
 Let us know how this process was for you via [Discord](https://discord.gg/hemixyz). We are constantly looking for ways to improve our documentation.
-{% endhint %}
 
 ***
 
