@@ -107,7 +107,7 @@ Your output should be:
 
 ***
 
-### 5. Verify configuration success
+### 5️⃣. Verify configuration success
 
 To ensure you downloaded the correct binaries and are able to run them, execute the command below:
 
@@ -132,7 +132,7 @@ Environment:
 
 ***
 
-### 6️⃣a. Generate public key
+### 6️⃣🅰️. Generate public key
 
 If you prefer to PoP mine using a preexisting private key, you may skip this step. **You may import a private key from either an EVM or BTC address.**
 
@@ -143,7 +143,7 @@ If you prefer to PoP mine using a preexisting private key, you may skip this ste
 </strong></code></pre><p><strong>Note:</strong> After running the command, you might not see any immediate feedback in the Command Prompt. This is expected behavior.</p><ol start="4"><li>Open the generated key file</li></ol><p>After generating the key file, you'll want to check its contents. To do this, use the following command in Command Prompt:</p><pre class="language-cmd" data-overflow="wrap"><code class="lang-cmd">%HOMEDRIVE%%HOMEPATH%\popm-address.json
 </code></pre><p>This command opens the <code>popm-address.json</code> file in Notepad, allowing you to view or edit the generated key.</p></td></tr></tbody></table>
 
-### 6️⃣b. Open the JSON
+### 6️⃣🅱️. Open the JSON
 
 If you chose to generate a new private key in Step 6a, open your JSON to view your file contents.&#x20;
 
