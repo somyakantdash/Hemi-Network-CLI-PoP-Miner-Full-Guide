@@ -186,8 +186,8 @@ Fund your wallet:&#x20;
 
 In your console, execute the following commands while:
 
-1. replacing `<private_key>` with either the value from your JSON file in Step 5 **OR** your preexisting EVM/BTC private key,
-2. replacing `<fee_per_vB_integer>` with the fee in sat/vB you want to pay.&#x20;
+1. replacing `private_key` with either the value from your JSON file in Step 5 **OR** your preexisting EVM/BTC private key,
+2. replacing `fee_per_vB_integer` with the fee in sat/vB you want to pay.&#x20;
 
 Read the [**"Bitcoin fee/vB"**](setup-part-1.md#bitcoin-fee-vb) section below if you need help determining what value to set here.&#x20;
 
