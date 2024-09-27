@@ -74,9 +74,9 @@ Launch your CLI:
 
 Navigate to the folder you extracted by typing `cd` (**don't press `Enter` ye**t) and then drag the path of the extracted folder into your CLI, or type the path in manually and then press `Enter`.
 
-* For example on Linux if you downloaded the package to your Downloads folder and extracted it through the GUI, you might run a command like:\
+* For example on Windows if you downloaded the package to your Downloads folder and extracted it through the GUI, you might run a command like:\
   \
-  `cd '/home/user/Downloads/heminetwork_v0.2.8_linux_amd64'`
+  `cd '/home/user/Downloads/heminetwork_v0.4.3_windows_amd64'`
 
 ***
 
@@ -251,3 +251,42 @@ The Bitcoin transaction (normally represented in satsoshis per virtual byte or s
 
 1. Check Current Fee Levels: Visit [mempool.space](https://mempool.space/testnet) to see the current fee levels. Look at the "sat/vB" numbers for the different transaction fee priorities. It is recommended to set the value to the "High Priority" value or slightly higher.
 2. Set the Static Fee: Re-run the command to set the `POPM_STATIC_FEE` environment variable from above (`export` on Linux/macOS, `set` on Windows) each time you want to change the fee, and restart the PoP Miner afterwards.
+
+🔶For Next Day Run This Command
+
+###1️⃣ Open your CLI and navigate to the extracted folder 
+
+Launch your CLI:
+
+**For Windows:**
+
+* Press `⊞ Win` + `R` together to open the "Run Program Or File" Window
+* Type "cmd" and press `Enter`
+
+Navigate to the folder you extracted by typing `cd` (**don't press `Enter` ye**t) and then drag the path of the extracted folder into your CLI, or type the path in manually and then press `Enter`.
+
+* For example on Windows if you downloaded the package to your Downloads folder and extracted it through the GUI, you might run a command like:\
+  \
+  `cd '/home/user/Downloads/heminetwork_v0.4.3_windows_amd64'`
+
+###2️⃣ Confirm folder contents
+
+**For Windows:**
+
+* `dir`  (and press `Enter`)
+
+###3️⃣ Run the Miner
+
+In your console, execute the following commands while:
+
+1. replacing `private_key` with either the value from your JSON file in Step 5 **OR** your preexisting EVM/BTC private key,
+2. replacing `fee_per_vB_integer` with the fee in sat/vB you want to pay.&#x20;
+
+**Windows**
+
+```
+set POPM_BTC_PRIVKEY=private_key
+set POPM_STATIC_FEE=fee_per_vB_integer
+set POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public 
+popmd.exe
+```
