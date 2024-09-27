@@ -252,9 +252,9 @@ The Bitcoin transaction (normally represented in satsoshis per virtual byte or s
 1. Check Current Fee Levels: Visit [mempool.space](https://mempool.space/testnet) to see the current fee levels. Look at the "sat/vB" numbers for the different transaction fee priorities. It is recommended to set the value to the "High Priority" value or slightly higher.
 2. Set the Static Fee: Re-run the command to set the `POPM_STATIC_FEE` environment variable from above (`export` on Linux/macOS, `set` on Windows) each time you want to change the fee, and restart the PoP Miner afterwards.
 
-🔶For Next Day Run This Command
+# 🔶For Next Day Run This Command
 
-# 1️⃣ Open your CLI and navigate to the extracted folder 
+## 1️⃣ Open your CLI and navigate to the extracted folder 
 
 Launch your CLI:
 
@@ -269,13 +269,13 @@ Navigate to the folder you extracted by typing `cd` (**don't press `Enter` ye**t
   \
   `cd '/home/user/Downloads/heminetwork_v0.4.3_windows_amd64'`
 
-# 2️⃣ Confirm folder contents
+### 2️⃣ Confirm folder contents
 
 **For Windows:**
 
 * `dir`  (and press `Enter`)
 
-# 3️⃣ Run the Miner
+### 3️⃣ Run the Miner
 
 In your console, execute the following commands while:
 
