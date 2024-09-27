@@ -254,7 +254,7 @@ The Bitcoin transaction (normally represented in satsoshis per virtual byte or s
 
 🔶For Next Day Run This Command
 
-###1️⃣ Open your CLI and navigate to the extracted folder 
+# 1️⃣ Open your CLI and navigate to the extracted folder 
 
 Launch your CLI:
 
@@ -269,13 +269,13 @@ Navigate to the folder you extracted by typing `cd` (**don't press `Enter` ye**t
   \
   `cd '/home/user/Downloads/heminetwork_v0.4.3_windows_amd64'`
 
-###2️⃣ Confirm folder contents
+# 2️⃣ Confirm folder contents
 
 **For Windows:**
 
 * `dir`  (and press `Enter`)
 
-###3️⃣ Run the Miner
+# 3️⃣ Run the Miner
 
 In your console, execute the following commands while:
 
